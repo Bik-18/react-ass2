@@ -1,0 +1,24 @@
+#feedBacksContainer{
+    background-color: blueviolet;
+    border: 2px solid balck;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    /* font-weight: 500; */
+
+    
+}
+@media (prefers-reduced-motion: no-preference) {
+    #feedBacksContainer{
+        /* background-color: blueviolet;
+        border: 2px solid balck;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 20px; */
+        margin: 10px 20px;
+        /* font-weight: 500; */
+    
+        
+    }
+    
+  }
