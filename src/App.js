@@ -39,6 +39,12 @@ class App extends Component {
     }
     console.log(this.state.feedbacks)
   }
+  removeState=(index)=>{
+    const feedbacks=[...this.state.feedbacks];
+    feedbacks.splice(index,1);
+    this.setState({feedbacks});
+
+  }
   render(){
     return (
       <>
@@ -58,8 +64,8 @@ class App extends Component {
               </div>
               <hr></hr>
               <div id="feedbacksResultDiv">
-                {this.state.feedbacks.map((value)=>{
-                  return <FeedbackComponent name={value.name} departement={value.departement} rating={value.rating}/>
+                {this.state.feedbacks.map((value,index)=>{
+                  return <FeedbackComponent name={value.name} departement={value.departement} rating={value.rating} delete={()=>{this.removeState(index)}}/>
                 })}
                 
               </div>
